@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -40,6 +42,9 @@ function Section({children, title}: SectionProps): React.JSX.Element {
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
+        <Icon name="home" size={30} color="red" />
+        <Icon name="home" size={30} color="red" />
+        <Icon name="home" size={30} color="red" />
         {title}
       </Text>
       <Text
@@ -68,6 +73,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
+
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
